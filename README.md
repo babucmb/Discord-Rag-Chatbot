@@ -102,6 +102,7 @@ bash
 Copy
 Edit
 python discord_bot.py
+---
 ``` ☁️ Deployment Notes
 Hosting 24/7
 You can deploy this on:
@@ -113,14 +114,14 @@ Railway.app
 Render.com
 
 Azure VM (for full Discord/Web stack)
-
+---
 🛠 Recommended Tools
 Use .gitignore to exclude .env and vectorstore/
 
 For Discord bot hosting, use a VM or service that supports persistent Python background tasks
 
 Use screen or tmux if deploying on Azure/Linux VM
-
+---
 ``` 👨‍💻 Author
 Built by Chilakani Mahesh Babu (CMB040)
 As part of an AI project to demonstrate LLM + RAG deployment in multiple interfaces.
