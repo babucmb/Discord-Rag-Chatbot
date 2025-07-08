@@ -6,8 +6,8 @@ A Retrieval-Augmented Generation (RAG) bot that answers questions from a PDF FAQ
 
 ## 🔗 Live Links
 
-- 🌐 Web App (Gradio): [https://4d261da699ca0b7580.gradio.live]([https://4d261da699ca0b7580.gradio.live](https://huggingface.co/spaces/CMB040/rag-faq-bot))
-- 💬 Discord Bot Server: [Join Discord Server]([https://discord.gg/YOUR_INVITE_LINK](https://discord.gg/U5mczbRc))
+- 🌐 Web App (Gradio): [https://4d261da699ca0b7580.gradio.live](https://huggingface.co/spaces/CMB040/rag-faq-bot))
+- 💬 Discord Bot Server: [Join Discord Server](https://discord.gg/U5mczbRc))
 
 ---
 
