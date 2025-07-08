@@ -68,8 +68,8 @@ DISCORD_TOKEN=your_discord_token_here
 🔧 Setup Instructions
 
 # Clone the project
-$ git clone https://github.com/yourname/project_rag_bot.git
-$ cd project_rag_bot
+$ git clone[ https://github.com/yourname/project_rag_bot.git](https://github.com/babucmb/Discord-Rag-Chatbot)
+$ Discord-Rag-Chatbot
 
 # Create virtual environment
 $ python -m venv .venv
