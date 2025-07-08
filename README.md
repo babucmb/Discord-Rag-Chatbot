@@ -62,7 +62,7 @@ Edit
 
 ## 🔐 .env File Format
 
-```env
+env
 HUGGINGFACEHUB_API_TOKEN=your_huggingface_token
 DISCORD_TOKEN=your_discord_bot_token
 ⚠️ Important: Never push .env to GitHub! Add it to .gitignore.
@@ -103,7 +103,7 @@ Copy
 Edit
 python discord_bot.py
 ---
-``` ☁️ Deployment Notes
+--- ☁️ Deployment Notes
 Hosting 24/7
 You can deploy this on:
 
@@ -122,22 +122,15 @@ For Discord bot hosting, use a VM or service that supports persistent Python bac
 
 Use screen or tmux if deploying on Azure/Linux VM
 ---
-``` 👨‍💻 Author
+--- 👨‍💻 Author
 Built by Chilakani Mahesh Babu (CMB040)
 As part of an AI project to demonstrate LLM + RAG deployment in multiple interfaces.
-```
-``` 📜 License
+---
+--- 📜 License
 This project is open-source and intended for educational purposes only. Do not push API keys or private PDFs to any public repository.
 
 yaml
 Copy
 Edit
-```
 ---
 
-Let me know if you'd like to:
-- Add badges (like `Python`, `LangChain`, `HuggingFace`, etc.)
-- Auto-generate a GitHub Pages documentation
-- Add deployment steps for Railway or Azure VM
-
-Ready to copy-paste into your `README.md`!
