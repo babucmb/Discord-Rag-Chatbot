@@ -128,9 +128,5 @@ As part of an AI project to demonstrate LLM + RAG deployment in multiple interfa
 ---
 --- 📜 License
 This project is open-source and intended for educational purposes only. Do not push API keys or private PDFs to any public repository.
-
-yaml
-Copy
-Edit
 ---
 
