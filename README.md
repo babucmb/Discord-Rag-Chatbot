@@ -1,134 +1,142 @@
-# Discord-Rag-Chatbot
-RAG FAQ Bot: Discord + Web Interface
+# 🤖 RAG FAQ Bot (Discord + Web)
 
-Welcome to the RAG FAQ Bot — a Retrieval-Augmented Generation (RAG) powered assistant that works both as a Discord bot and a Gradio web app. This bot allows users to ask natural language questions based on an internal FAQ PDF.
+A Retrieval-Augmented Generation (RAG) bot that answers questions from a PDF FAQ document using **Hugging Face models**. This bot is available via both **Gradio Web UI** and a **Discord Bot**.
 
-🚀 Live Links
+---
 
-🌐 Web App (Gradio): https://huggingface.co/spaces/CMB040/rag-faq-bot
+## 🔗 Live Links
 
-🤖 Discord Bot Server: https://discord.gg/U5mczbRc
+- 🌐 Web App (Gradio): [https://4d261da699ca0b7580.gradio.live]([https://4d261da699ca0b7580.gradio.live](https://huggingface.co/spaces/CMB040/rag-faq-bot))
+- 💬 Discord Bot Server: [Join Discord Server]([https://discord.gg/YOUR_INVITE_LINK](https://discord.gg/U5mczbRc))
 
-🔎 Features
+---
 
-📄 Ingests PDF documents (FAQ-style)
+## 📌 Features
 
-🔍 Semantic search using vector similarity (FAISS)
+- Upload a PDF and ask questions about its content
+- Supports both **Web** and **Discord** interfaces
+- Powered by **Hugging Face Embeddings**
+- Uses **FAISS** for vector storage & fast retrieval
+- Fully customizable with LangChain modules
 
-🧠 Embeddings powered by Hugging Face models
+---
 
-🤖 Available as both CLI, Web App, and Discord Bot
+## 🧠 Technologies Used
 
-🔊 Voice-compatible with text input/output
+### Libraries
+- `langchain`
+- `langchain_community`
+- `langchain_huggingface`
+- `transformers`
+- `discord.py`
+- `gradio`
+- `python-dotenv`
+- `PyMuPDF` (PDF parsing)
+- `faiss-cpu`
 
-🧰 Tech Stack & Libraries
+### Models
+- `sentence-transformers/all-MiniLM-L6-v2` (for embeddings)
 
-🧠 LLMs and Models
+---
 
-sentence-transformers/all-MiniLM-L6-v2 via Hugging Face
-
-LangChain (with RAG chaining logic)
-
-FAISS (for fast vector search)
-
-🛠️ Python Libraries
-
-langchain, langchain_community, langchain_huggingface
-
-gradio (for web UI)
-
-discord.py (for bot integration)
-
-dotenv (environment handling)
-
-PyMuPDF (PDF loader)
-
-📁 Project Structure
+## 📁 Project Structure
 
 rag-discord-bot/
-├── .env                         # API keys (Discord, HF Token) [DO NOT COMMIT]
-├── ingest.py                   # Script to convert PDF → Vector DB
-├── rag_query.py                # CLI test script
-├── rag_web.py                  # Web-based chatbot
-├── discord_bot.py              # Discord bot version
-├── vectorstore/
-│   ├── index.faiss
-│   └── index.pkl
+├── .env # Environment variables (API keys)
 ├── data/
-│   └── faq.pdf, datafaq.pdf    # Your documents
-├── requirements.txt            # All dependencies
+│ └── faq.pdf # Input document
+├── ingest.py # PDF → Chunk → Embeddings → FAISS
+├── rag_query.py # Local CLI interface
+├── rag_web.py # Gradio Web Interface
+├── discord_bot.py # Discord Bot handler
+├── vectorstore/
+│ ├── index.faiss
+│ └── index.pkl
+├── requirements.txt
 
-🔐 .env Format
+yaml
+Copy
+Edit
 
-HUGGINGFACEHUB_API_TOKEN=hf_...
-DISCORD_TOKEN=your_discord_token_here
+---
 
-✅ Ensure .env is included in .gitignore to avoid leaking secrets.
+## 🔐 .env File Format
 
-🔧 Setup Instructions
+```env
+HUGGINGFACEHUB_API_TOKEN=your_huggingface_token
+DISCORD_TOKEN=your_discord_bot_token
+⚠️ Important: Never push .env to GitHub! Add it to .gitignore.
 
-# Clone the project
-$ git clone[ https://github.com/yourname/project_rag_bot.git](https://github.com/babucmb/Discord-Rag-Chatbot)
-$ Discord-Rag-Chatbot
+⚙️ Setup Instructions
+1. Clone & Create Virtual Environment
+bash
+Copy
+Edit
+git clone https://github.com/your-username/rag-discord-bot.git
+cd rag-discord-bot
 
-# Create virtual environment
-$ python -m venv .venv
-$ source .venv/Scripts/activate  # Windows
+python -m venv .venv
+.\.venv\Scripts\activate  # Windows
+2. Install Dependencies
+bash
+Copy
+Edit
+pip install -r requirements.txt
+3. Ingest Document
+bash
+Copy
+Edit
+python ingest.py
+4. Test Locally (CLI)
+bash
+Copy
+Edit
+python rag_query.py
+5. Launch Web App
+bash
+Copy
+Edit
+python rag_web.py
+6. Start Discord Bot
+bash
+Copy
+Edit
+python discord_bot.py
+☁️ Deployment Notes
+Hosting 24/7
+You can deploy this on:
 
-# Install dependencies
-$ pip install -r requirements.txt
+Hugging Face Spaces (Web Only)
 
-# Ingest PDF data
-$ python ingest.py
+Railway.app
 
-# Launch Web Interface
-$ python rag_web.py
+Render.com
 
-# Run Discord Bot
-$ python discord_bot.py
+Azure VM (for full Discord/Web stack)
 
-💻 Optional: Azure Deployment
+🛠 Recommended Tools
+Use .gitignore to exclude .env and vectorstore/
 
-Want Me to Prepare a .zip Ready for Azure?
-Just say “yes” — I’ll package your code for easy uploading.
+For Discord bot hosting, use a VM or service that supports persistent Python background tasks
 
-🚀 Summary
+Use screen or tmux if deploying on Azure/Linux VM
 
-Step
+👨‍💻 Author
+Built by Chilakani Mahesh Babu (CMB040)
+As part of an AI project to demonstrate LLM + RAG deployment in multiple interfaces.
 
-Status
+📜 License
+This project is open-source and intended for educational purposes only. Do not push API keys or private PDFs to any public repository.
 
-Create Azure account
+yaml
+Copy
+Edit
 
-✅ Done
+---
 
-Create VM
+Let me know if you'd like to:
+- Add badges (like `Python`, `LangChain`, `HuggingFace`, etc.)
+- Auto-generate a GitHub Pages documentation
+- Add deployment steps for Railway or Azure VM
 
-🛠️ You Do
-
-Upload bot code
-
-🔼 Easy
-
-Install Python & deps
-
-🧪 Yes
-
-Run bot 24/7
-
-✅ With screen
-
-Done 🎉
-
-🟢 Ready
-
-Let me know when your VM is up — I’ll help live.
-
-📄 License
-
-This project is for educational/demo use. Please do not upload API keys publicly.
-
-🙋‍♂️ Author
-
-CMB040  — built as part of AI/ML intern project to demonstrate LLM integration with real-time assistants.
-
+Ready to copy-paste into your `README.md`!
