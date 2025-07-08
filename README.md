@@ -72,8 +72,8 @@ DISCORD_TOKEN=your_discord_bot_token
 bash
 Copy
 Edit
-git clone https://github.com/your-username/rag-discord-bot.git
-cd rag-discord-bot
+git clone (https://github.com/babucmb/Discord-Rag-Chatbot)
+cd Discord-Rag-Chatbot
 
 python -m venv .venv
 .\.venv\Scripts\activate  # Windows
@@ -102,7 +102,7 @@ bash
 Copy
 Edit
 python discord_bot.py
-☁️ Deployment Notes
+``` ☁️ Deployment Notes
 Hosting 24/7
 You can deploy this on:
 
@@ -121,17 +121,17 @@ For Discord bot hosting, use a VM or service that supports persistent Python bac
 
 Use screen or tmux if deploying on Azure/Linux VM
 
-👨‍💻 Author
+``` 👨‍💻 Author
 Built by Chilakani Mahesh Babu (CMB040)
 As part of an AI project to demonstrate LLM + RAG deployment in multiple interfaces.
-
-📜 License
+```
+``` 📜 License
 This project is open-source and intended for educational purposes only. Do not push API keys or private PDFs to any public repository.
 
 yaml
 Copy
 Edit
-
+```
 ---
 
 Let me know if you'd like to:
